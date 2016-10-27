@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTask4", "ClassL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTask4.Tests", "ClassLibraryTask4.Tests\ClassLibraryTask4.Tests.csproj", "{9746891F-549D-4817-B1D0-D9CD06A1505E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryTask1.TestsDDT", "ClassLibraryTask1.TestsDDT\ClassLibraryTask1.TestsDDT.csproj", "{ED53CD1F-7996-43B7-8B81-5B27D92FE1C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{9746891F-549D-4817-B1D0-D9CD06A1505E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9746891F-549D-4817-B1D0-D9CD06A1505E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9746891F-549D-4817-B1D0-D9CD06A1505E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED53CD1F-7996-43B7-8B81-5B27D92FE1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED53CD1F-7996-43B7-8B81-5B27D92FE1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED53CD1F-7996-43B7-8B81-5B27D92FE1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED53CD1F-7996-43B7-8B81-5B27D92FE1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

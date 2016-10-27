@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+  <TestCase>
+    <Count>7</Count>
+    <Array>1 2 3 4 3 2 1</Array>
+    <ExpectedResult>3</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>6</Count>
+    <Array>1 100 50 -51 1 1</Array>
+    <ExpectedResult>1</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>7</Count>
+    <Array>1 2 3 4 5 2 1</Array>
+    <ExpectedResult>-1</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>4</Count>
+    <Array>1 1 1 1</Array>
+    <ExpectedResult>-1</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>1</Count>
+    <Array>100</Array>
+    <ExpectedResult>-1</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>2</Count>
+    <Array>0 0</Array>
+    <ExpectedResult>-1</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <Count>0</Count>
+    <Array></Array>
+    <ExpectedException>System.Exception</ExpectedException>
+  </TestCase>
+</TestCases>

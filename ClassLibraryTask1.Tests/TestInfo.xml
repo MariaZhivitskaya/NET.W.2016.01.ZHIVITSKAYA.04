@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+	<TestCase>
+		<Parameters Size = 7>
+			<Value>1</Value>
+			<Value>2</Value>
+			<Value>3</Value>
+			<Value>4</Value>
+			<Value>3</Value>
+			<Value>2</Value>
+			<Value>1</Value>
+		</Parameters>
+		<ExpectedResult>3</ExpectedResult>
+  </TestCase>
+</TestCases>

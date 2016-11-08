@@ -13,7 +13,7 @@ namespace ClassLibraryTask4.Tests
 
         public string DoubleToIEEE754Tests(double number)
         {
-            return DoubleExtension.DoubleToIEEE754(number);
+            return number.DoubleToIEEE754();
         }
     }
 }

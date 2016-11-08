@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ClassLibraryTask1.TestsDDT
@@ -29,10 +27,10 @@ namespace ClassLibraryTask1.TestsDDT
             try
             {
                 var info = Convert.ToString(TestContext.DataRow["Array"]);
-                var tokens = info.Split(new char[] {' '});
-                var size = Convert.ToInt32(TestContext.DataRow["Count"]);
+                var tokens = info.Split(' ');
+                int size = Convert.ToInt32(TestContext.DataRow["Count"]);
                 var arr = new int[size];
-                var i = 0;
+                int i = 0;
                 if (size > 0)
                 {
                     foreach (var element in tokens)
@@ -41,9 +39,19 @@ namespace ClassLibraryTask1.TestsDDT
                     }
                 }
 
-                var actual = ArrayHandler.FindIndex(arr);
+                int? actual = ArrayHandler.FindIndex(arr);
+                int? expect;
 
-                var expect = Convert.ToInt32(TestContext.DataRow["ExpectedResult"]);
+                var value = TestContext.DataRow["ExpectedResult"];
+
+                if (!value.Equals("null"))
+                {
+                    expect = Convert.ToInt32(value);
+                }
+                else
+                {
+                    expect = null;
+                }
 
                 Assert.AreEqual(expect, actual);
             }

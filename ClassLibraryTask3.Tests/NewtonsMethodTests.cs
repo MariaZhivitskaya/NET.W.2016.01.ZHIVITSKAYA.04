@@ -7,24 +7,19 @@ namespace ClassLibraryTask3.Tests
     [TestFixture]
     public class NewtonsMethodTests
     {
-        [TestCase(9, 3, 3)]
-        [TestCase(12.487, 26, 16)]
-        [TestCase(9, 2, 24, ExpectedException = typeof(Exception))]
-        [TestCase(-416846, 19, 5)]
-        [TestCase(-416846, 20, 5, ExpectedException = typeof(Exception))]
-        [TestCase(0.745849, 0.4876, 10)]
-        [TestCase(0.745849, -0.4876, 10)]
-        [TestCase(0.745849, -0.4876, 10)]
-        [TestCase(0, 0, 15, ExpectedException = typeof(Exception))]
-        [TestCase(584569, 0, 3)]
+        [TestCase(9, 3, 0.001)]
+        [TestCase(12.487, 24, 1E-16)]
+        [TestCase(9, 2, 1E-548, ExpectedException = typeof(ArgumentException))]
+        [TestCase(-416846, 19, 0.00001)]
+        [TestCase(-416846, 20, 0.001, ExpectedException = typeof(ArgumentException))]
+        [TestCase(584569, 0, 0.0001)]
 
-        public void CountRootTests(double number, double degree, int precision)
+        public void CountRootTests(double number, int degree, double precision)
         {
-            var difference = Math.Abs(Math.Pow(number, 1/degree) -
-                                               NewtonsMethod.CountRoot(number, degree, precision));
-            var eps = Math.Pow(10, -degree);
+            double expect = Math.Pow(number, (double) 1/degree);
+            double result = NewtonsMethod.CountRoot(number, degree, precision);
 
-            Assert.Less(difference, eps);
+            Assert.Less(Math.Abs(expect - result), precision);
         }
     }
 }

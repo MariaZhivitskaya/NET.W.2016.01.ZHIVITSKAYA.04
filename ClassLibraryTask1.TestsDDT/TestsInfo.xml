@@ -13,26 +13,26 @@
   <TestCase>
     <Count>7</Count>
     <Array>1 2 3 4 5 2 1</Array>
-    <ExpectedResult>-1</ExpectedResult>
+    <ExpectedResult>null</ExpectedResult>
   </TestCase>
   <TestCase>
     <Count>4</Count>
     <Array>1 1 1 1</Array>
-    <ExpectedResult>-1</ExpectedResult>
+    <ExpectedResult>null</ExpectedResult>
   </TestCase>
   <TestCase>
     <Count>1</Count>
     <Array>100</Array>
-    <ExpectedResult>-1</ExpectedResult>
+    <ExpectedException>System.ArgumentException</ExpectedException>
   </TestCase>
   <TestCase>
     <Count>2</Count>
     <Array>0 0</Array>
-    <ExpectedResult>-1</ExpectedResult>
+    <ExpectedException>System.ArgumentException</ExpectedException>
   </TestCase>
   <TestCase>
     <Count>0</Count>
     <Array></Array>
-    <ExpectedException>System.Exception</ExpectedException>
+    <ExpectedException>System.ArgumentOutOfRangeException</ExpectedException>
   </TestCase>
 </TestCases>

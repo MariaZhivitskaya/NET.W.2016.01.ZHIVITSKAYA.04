@@ -4,43 +4,38 @@ namespace ClassLibraryTask3
 {
     public class NewtonsMethod
     {
+        private static readonly double _maxPrecision = Math.Pow(10, -sizeof(double) * 8);
+
         /// <summary>
         /// Counts an n-th root of the number
         /// with the given accuracy.
         /// </summary>
+        /// <exception cref="ArgumentException">Thrown if parameters are wrong.</exception>
         /// <param name="number">A number for counting an n-th root.</param>
-        /// <param name="degree">The value of n.</param>
-        /// <param name="precision">The exact number of decimal places.</param>
+        /// <param name="power">A value of n.</param>
+        /// <param name="precision">A precision.</param>
         /// <returns>Returns the resulting number.</returns>
-        public static double CountRoot(double number, double degree, int precision)
+        public static double CountRoot(double number, int power, double precision)
         {
-            if (precision > 16 || precision < 1)
-            {
-                throw new Exception("Wrong precision!");
-            }
+            if (precision < _maxPrecision || precision > 0.1)
+                throw new ArgumentException("Wrong precision!");
 
-            if (number < 0 && (degree > 1 && (int)degree%2 == 0))
-            {
-                throw new Exception("Impossible to take an aliquot root " +
+            if (power < 0)
+                throw new ArgumentException("Wrong power!");
+
+            if (number < 0 && power%2 == 0)
+                throw new ArgumentException("Impossible to take an aliquot root " +
                                     "from a negative number!");
-            }
 
-
-            if (degree.Equals(0.0) && number.Equals(0.0))
-            {
-                throw new Exception("Uncertainty (zero in the zero degree)!");
-            }
-
-            var xCur = number;
+            double xCur = number;
             double xPrev;
-            var eps = Math.Pow(10, -(precision + 1));
-
+            
             do
             {
                 xPrev = xCur;
-                xCur = ((degree - 1) * xPrev + 
-                    number / Math.Pow(xPrev, degree - 1)) / degree;
-            } while (Math.Abs(xCur - xPrev) > eps);
+                xCur = ((power - 1) * xPrev + 
+                    number / Math.Pow(xPrev, power - 1)) / power;
+            } while (Math.Abs(xCur - xPrev) > precision);
 
             return xCur;
         }

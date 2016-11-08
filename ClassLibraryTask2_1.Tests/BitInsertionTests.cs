@@ -7,8 +7,8 @@ namespace ClassLibraryTask2_1.Tests
     public class BitInsertionTests
     {
         [TestCase(8, 15, 0, 0, Result = 9)]
-        [TestCase(0, 54, 12, 4, ExpectedException = typeof(Exception))]
-        [TestCase(0, 54, 0, 34, ExpectedException = typeof(Exception))]
+        [TestCase(0, 54, 12, 4, ExpectedException = typeof(ArgumentException))]
+        [TestCase(0, 54, 0, 34, ExpectedException = typeof(ArgumentException))]
         [TestCase(0, 15, 0, 30, Result = 15)]
         [TestCase(15, int.MaxValue, 3, 5, Result = 63)]
         [TestCase(0, -15, 0, 4, Result = 31)]

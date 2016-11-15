@@ -9,12 +9,12 @@ namespace ClassLibraryTask4
         private const int DoubleSize = sizeof (double) * 8;
 
         /// <summary>
-        /// Obtains the binary representation of a real number 
-        /// in the IEEE double precision format 754. 
+        /// Obtains the binary representation of the real number 
+        /// in the IEEE754 double precision format. 
         /// </summary>
-        /// <param name="number">A number to be converted.</param>
-        /// <returns>Returns a representation of the number 
-        /// (as a string).</returns>
+        /// <param name="number">The number to be converted.</param>
+        /// <returns>Returns The representation of the number
+        /// as a string.</returns>
         public static string DoubleToIEEE754(this double number)
         {
             var bits = new BitArray(BitConverter.GetBytes(number));

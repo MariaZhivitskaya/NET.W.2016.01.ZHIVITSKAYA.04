@@ -4,20 +4,20 @@ namespace ClassLibraryTask3
 {
     public class NewtonsMethod
     {
-        private static readonly double _maxPrecision = Math.Pow(10, -sizeof(double) * 8);
+        private static readonly double MaxPrecision = Math.Pow(10, -sizeof(double) * 8);
 
         /// <summary>
         /// Counts an n-th root of the number
         /// with the given accuracy.
         /// </summary>
         /// <exception cref="ArgumentException">Thrown if parameters are wrong.</exception>
-        /// <param name="number">A number for counting an n-th root.</param>
-        /// <param name="power">A value of n.</param>
-        /// <param name="precision">A precision.</param>
+        /// <param name="number">The number for counting an n-th root.</param>
+        /// <param name="power">The value of n.</param>
+        /// <param name="precision">The precision.</param>
         /// <returns>Returns the resulting number.</returns>
         public static double CountRoot(double number, int power, double precision)
         {
-            if (precision < _maxPrecision || precision > 0.1)
+            if (precision < MaxPrecision || precision > 0.1)
                 throw new ArgumentException("Wrong precision!");
 
             if (power < 0)

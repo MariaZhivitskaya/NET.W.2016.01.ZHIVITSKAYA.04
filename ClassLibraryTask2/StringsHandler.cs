@@ -14,9 +14,9 @@ namespace ClassLibraryTask2
         /// null or empty.</exception>
         /// <exception cref="ArgumentException">Thrown if strings don't
         /// consist of numbers.</exception>
-        /// <param name="a">A string consisting of symbols
+        /// <param name="a">The string consisting of symbols
         /// from 'a' to 'z'. </param>
-        /// <param name="b">A string consisting of symbols
+        /// <param name="b">The string consisting of symbols
         /// from 'a' to 'z'. </param>
         /// <returns>Returns the resulting string.</returns>
         public static string Longest(string a, string b)

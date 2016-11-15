@@ -5,15 +5,15 @@ namespace ClassLibraryTask1
     public class ArrayHandler
     {
         /// <summary>
-        /// Finds an index in the array, where sum of left elements
-        /// equals to sum of right elements.
+        /// Finds the index in the array, where the sum of left elements
+        /// equals to the sum of right elements.
         /// </summary>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown if an array
-        /// has a wrong length.</exception>
-        /// <exception cref="ArgumentException">Thrown if an array
-        /// has wrong number of arguments.</exception>
-        /// <param name="array">An array for handling.</param>
-        /// <returns>Returns the lowest index or return null if an element
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if the array
+        /// has the wrong length.</exception>
+        /// <exception cref="ArgumentException">Thrown if the array
+        /// has the wrong number of arguments.</exception>
+        /// <param name="array">The array for handling.</param>
+        /// <returns>Returns the lowest index or return null if the element
         /// doesn't exist.</returns>
         public static int? FindIndex(int[] array)
         {

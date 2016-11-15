@@ -10,14 +10,14 @@ namespace ClassLibraryTask2_1
         /// <summary>
         /// Inserts one number into another
         /// so that the second number occupies the position from
-        /// a left bit to a right bit (bits are numbered from right
+        /// the left bit to the right bit (bits are numbered from right
         /// to left).
         /// </summary>
         /// <exception cref="ArgumentException">Thrown if bits are wrong.</exception>
-        /// <param name="number1">A number to be inserted in.</param>
-        /// <param name="number2">An inserted number.</param>
-        /// <param name="rightBit">A right bit.</param>
-        /// <param name="leftBit">A left bit.</param>
+        /// <param name="number1">The number to be inserted in.</param>
+        /// <param name="number2">The inserted number.</param>
+        /// <param name="rightBit">The right bit.</param>
+        /// <param name="leftBit">The left bit.</param>
         /// <returns>Returns the resulting number.</returns>
         public static int Insertion(int number1, int number2, int rightBit, int leftBit)
         {
@@ -43,7 +43,7 @@ namespace ClassLibraryTask2_1
         /// Finding the starting position of significant bits in 
         /// the second number.
         /// </summary>
-        /// <param name="bitArray">An array for finding.</param>
+        /// <param name="bitArray">The array for finding.</param>
         /// <returns>Returns the starting position of significant bits.</returns>
         private static int GetPosition(BitArray bitArray)
         {
@@ -57,13 +57,13 @@ namespace ClassLibraryTask2_1
         /// <summary>
         /// If the number of bits of the second number
         /// is greater or equal than the the length of insertion,
-        /// inserting bits of the second number into the first number
-        /// otherwise, filling the remaining place with 0-bits.
+        /// inserts bits of the second number into the first number
+        /// otherwise, fills the remaining place with 0-bits.
         /// </summary>
-        /// <param name="leftBit">A left bit.</param>
-        /// <param name="rightBit">A right bit.</param>
-        /// <param name="position">A starting position of significant bits in 
-        /// a BitArray2.</param>
+        /// <param name="leftBit">The left bit.</param>
+        /// <param name="rightBit">The right bit.</param>
+        /// <param name="position">The starting position of significant bits in 
+        /// the BitArray2.</param>
         /// <param name="bitArray1">Bits of number to be inserted in.</param>
         /// <param name="bitArray2">>Bits of inserted number.</param>
         private static void Insert(int leftBit, int rightBit, int position,
